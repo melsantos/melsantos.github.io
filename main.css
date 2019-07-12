@@ -1,0 +1,57 @@
+.hero-text {
+    color: #EFE9F4;
+    z-index: 1000;
+    display: block;
+}
+
+#name {
+    opacity: 0;
+    line-height: 1.5;
+    font-size: 5rem;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+#blurb {
+    font-size: 1.5rem;
+}
+
+#blink {
+    animation: blink 1s step-end infinite;
+}
+
+.hero {
+    background: linear-gradient(-30deg, #13262F, #68747A);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    font-family: 'Anton', sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.section {
+    max-width: 900px;
+    padding: 4em;
+}
+
+.section-header {
+    font-size: 3em;
+}
+
+.section-body {
+    font-size: 1.2em;
+}
+
+#footer{
+    bottom: 0;
+    width: 100%;
+    height: 6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #EFE9F4;
+}
