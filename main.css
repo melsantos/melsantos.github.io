@@ -39,6 +39,7 @@ h3 {
 
 #navbar-list {    
     list-style: none;
+    display: flex;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -261,9 +262,12 @@ h3 {
 }
 
 @media only screen and (max-width: 1000px) {
-    #navbar-list {
-        padding-left: 0;
-        left: unset;
+    .material-icons {
+        margin-right: 0;
+    }
+
+    .nav-text {
+        font-size: 0;
     }
 
     .edu {
