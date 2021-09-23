@@ -1,8 +1,20 @@
-var i = -1;
+var i = 0;
 var blurb = document.getElementById('typer');
-var blurb_text = "Hello World!";
+var blurbs = [    
+    "Hello World!",
+    "UC Riverside Alumni",
+    "Error: Object not found",
+    "Just kidding!",
+]
+var blurb_text = blurbs[0];
 var j = 0;
 var speed = 80;
+
+const body = document.body;
+
+if(body == null) {
+    console.log("cannot find body");
+}
 
 if(blurb != null) {
     console.log("Blurb exists");
@@ -11,15 +23,8 @@ if(blurb != null) {
     throw new Error();
 }
 
-var blurbs = [
-    "Hello World!",
-    "Error: Object not found.",
-    "Just kidding we found it.",
-    "Wait a minute..."
-]
-
 function startInterval() {
-    setInterval(changeText, 4500);
+    setInterval(changeText, 6000);
 }
 
 function typeOut() {
@@ -39,3 +44,5 @@ function changeText() {
 }
 
 startInterval();
+setTimeout(typeOut, 1500);
+

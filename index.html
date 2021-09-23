@@ -1,52 +1,267 @@
 <!DOCTYPE html>
 <head>
     <title>Melissa Santos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon.ico">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="anim.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    
 
-    <style>
-        * {
-            font-family: 'Montserrat', sans-serif; 
-            line-height: 2.0;
-        }
-    </style>
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="hover-min.css">
 </head>
 
 <body>
-    <div class="hero" style="text-align:center; display:flex; align-items:center">
-        <div class="mx-auto hero-text">
-            <div id="name">Melissa Santos</div>
-            <div id="blurb">
-                <span id="typer"></span>
-                <span style="position: relative; left: -5px;" id="blink">&boxv;</span>
-            </div>
-        </div>    
-    </div>
-
-    <div>
-        <div>
-            <!--
-            <nav class="nav flex-column vh-100 bg-dark fixed-top"
-                 style="width: 17rem; text-align:center; position:sticky; float:left">
-                <div class="my-auto">
-                    <a class="nav-link active" href="#about">About</a>
-                    <a class="nav-link" href="#project">Projects</a>
-                    <a class="nav-link" href="#contact">Contact</a>
+    <div class="container-fluid p-0" id="hero">
+        <div class="row m-0" id="particles-js">
+            <div class="mx-auto hero-text">
+                <div id="name">Melissa Santos</div>
+                <div id="blurb">
+                    <span id="typer"></span>
+                    <span style="position: relative; left: -8px; bottom:2px;" id="blink">&boxv;</span>
                 </div>
-            </nav>-->
-
+                <div class="hvr-float" id="scroll-down">
+                    <a href="#education"><i class="material-icons" style="font-size: 3rem">keyboard_arrow_down</i></a>
+                </div>
+            </div>
+            
+            <ul class="d-flex" id="navbar-list">
+                <li><a href="#education"><span class="material-icons">school</span>Education</a></li>
+                <li><a href="#projects"><span class="material-icons">code</span>Projects</a></li>
+                <li><a href="#skills"><span class="material-icons">architecture</span>My Skills</a></li>
+                <li><a href="media/Melissa_Santos_Resume.pdf"><i class="material-icons">description</i>Resume
+                </a></li>
+            </ul>
         </div>
     </div>
 
-    <div class="bg-dark" id="footer">
-        Built with HTML, CSS, and Bootstrap.
+    <section id="education">
+        <div class="container-fluid">
+            <h3>Education</h3>
+            <div class="row">
+                <div class="col left-part edu">
+                    <img src="media/UCR_LOGO.svg" class="edu-logo">
+                </div>
+
+                <div class="col right-part edu">
+                    <div><b>BS Computer Science</b> at <a href="https://www.ucr.edu/">University of California, Riverside</a></div>
+                    <div class="text-secondary"><em>September 2015 - June 2019</em></div>
+                    <div>Overall GPA: 3.33&nbspMajor GPA: 3.56</div>
+                </div>
+            </div>
+        </div>
+    </section>
+     
+    <section id="projects">
+        <div class="container-fluid">
+            <h3>My Projects</h3>
+
+            <div class="row d-flex p-3 proj-item">
+                <div class="col">
+                    <div class="left-part">
+                        <img class="rounded proj-img" src="media/proximity.png" alt="Project Thumbnail">     
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="right-part">
+                        <h4><b>Proximity</b>&nbsp<a href="https://github.com/melsantos/proximity"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" class="git-link"/></a></h4>
+                        <ul class="d-flex" id="built-with">
+                            <span class="text-secondary"><b>Built with:</b></span>
+                            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" /></li>
+                            <li><img src="media/django.svg" /></li>
+                            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" /></li>
+                            <li><img src="media/sqlite-icon.svg.png"></li>
+                            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" /></li>
+                        </ul>
+                        <span class="m-0">Proximity is a location based webapp mimicking the social app <a href="https://play.google.com/store/apps/details?id=com.synergetechsolutions.nearbylive">Nearby</a>. Developed by a team of 4 over a 10 week period using Agile methodology.</span> 
+                        <ul class="m-0">
+                            <li>Tracks location upon login and can shows nearby users.</li>
+                            <li>Marketplace that gives users a convenient way to buy and sell.</li>
+                            <li>Feed that shows the posts of friends and nearby people.</li>
+                        </ul>     
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row d-flex p-3 proj-item">
+                <div class="col">
+                    <div class="left-part">
+                        <img class="rounded proj-img" src="media/twitterSearch.png" alt="Project Thumbnail">     
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="right-part">
+                        <h4><b>Twitter Search</b>&nbsp<a href="https://github.com/melsantos/proximity"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" class="git-link"/></a></h4>
+                        <ul class="d-flex" id="built-with">
+                            <span class="text-secondary"><b>Built with:</b></span>
+                            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" /></li>
+                            <li><img src="media/glyph-elastic-cluster-color.svg"></li>
+                            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" /></li>
+                            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" /></li>
+                        </ul>
+                        <p>TwitterSearch is webapp for querying geotagged Tweets. Tweets are scrapped using <a href="https://github.com/python-twitter-tools/twitter">Python Twitter Tools</a> and stored locally. The tweets are then indexed by ElasticSearch and stored in a database. Users can then query the tweets with optional distance and sorting parameters. 
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+    <section id="skills">
+        <div class="container-fluid">
+            <h3>Skills</h3>
+            <ul class="skill-list d-flex">
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" /><div>Python</div></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" /><div>C++</div></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" /><div>C</div></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" /><div>Java</div></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" /><div>HTML5</div></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" /><div>CSS3</div></li>
+                <!-- <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" /><div>PostgreSQL</div></li> -->
+                <li><img src="media/django.svg" /><div>Django</div></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" /><div>Git</div></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" /><div>Visual Studio</div></li>
+                <!-- <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" /><div>Bootstrap</div></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" /><div>Javascript</div></li> -->
+                <!-- <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" /><div>Linux</div></li> -->
+                <!-- <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vim/vim-original.svg" /><div>Vim</div></li> -->
+            </ul>
+        </div>
+    </section>    
+
+    <div id="footer">
+        <div id="contact">
+            <h6>Contact Me:</h6>
+            <a href= "mailto:melissa.e.santos@outlook.com">
+            <i class="material-icons" style="font-size: 1em;">email</i>
+            melissa.e.santos@outlook.com
+            </a>
+        </div>
     </div>
-</body>
 
 <script src="site.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+    var partJson = {
+        "particles": {
+        "number": {
+            "value": 100,
+            "density": {
+            "enable": true,
+            "value_area": 800
+            }
+        },
+        "color": {
+            "value": "#1CB089"
+        },
+        "shape": {
+            "type": "circle",
+            "stroke": {
+            "width": 0,
+            "color": "#000000"
+            },
+            "polygon": {
+            "nb_sides": 3
+            },
+            "image": {
+            "src": "",
+            "width": 100,
+            "height": 100
+            }
+        },
+        "opacity": {
+            "value": 0.5,
+            "random": false,
+            "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+            }
+        },
+        "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+            }
+        },
+        "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#F3DFBF",
+            "opacity": 0.4,
+            "width": 1
+        },
+        "move": {
+            "enable": true,
+            "speed": 6,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+            }
+        }
+        },
+        "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": {
+            "enable": false,
+            "mode": "grab"
+            },
+            "onclick": {
+            "enable": false,
+            "mode": "repulse"
+            },
+            "resize": true
+        },
+        "modes": {
+            "grab": {
+            "distance": 225,
+            "line_linked": {
+                "opacity": 0.501821125050587
+            }
+            },
+            "bubble": {
+            "distance": 191.80819180819182,
+            "size": 15.984015984015986,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+            },
+            "repulse": {
+            "distance": 150,
+            "duration": 0.4
+            },
+            "push": {
+            "particles_nb": 4
+            },
+            "remove": {
+            "particles_nb": 2
+            }
+        }
+        },
+        "retina_detect": true
+    };
+    var jsonUri = "data:text/plain;base64,"+window.btoa(JSON.stringify(partJson));
+    particlesJS.load('particles-js', jsonUri);
+</script>
+</body>
