@@ -13,8 +13,6 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
-    
-
 
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="hover-min.css">
@@ -82,7 +80,7 @@
                             <li><img src="media/sqlite-icon.svg.png"></li>
                             <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" /></li>
                         </ul>
-                        <span class="m-0">Proximity is a location based webapp mimicking the social app <a href="https://play.google.com/store/apps/details?id=com.synergetechsolutions.nearbylive">Nearby</a>. Developed by a team of 4 over a 10 week period using Agile methodology.</span> 
+                        <p>Proximity is a location based webapp mimicking the social app <a href="https://play.google.com/store/apps/details?id=com.synergetechsolutions.nearbylive">Nearby</a>. Developed by a team of 4 over a 10 week period using Agile methodology.</p> 
                         <ul class="m-0">
                             <li>Tracks location upon login and can shows nearby users.</li>
                             <li>Marketplace that gives users a convenient way to buy and sell.</li>
@@ -108,7 +106,26 @@
                             <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" /></li>
                             <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" /></li>
                         </ul>
-                        <p>TwitterSearch is webapp for querying geotagged Tweets. Tweets are scrapped using <a href="https://github.com/python-twitter-tools/twitter">Python Twitter Tools</a> and stored locally. The tweets are then indexed by ElasticSearch and stored in a database. Users can then query the tweets with optional distance and sorting parameters. 
+                        <p>TwitterSearch is webapp for querying geotagged Tweets. Tweets are scrapped using <a href="https://github.com/python-twitter-tools/twitter">Python Twitter Tools</a> and stored locally. The tweets are then indexed by ElasticSearch and stored in a database. Users can then query the tweets with optional distance and sorting parameters.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row d-flex p-3 proj-item">
+                <div class="col">
+                    <div class="left-part">
+                        <img class="rounded proj-img" src="media/mechanicShopDB.png" alt="Project Thumbnail">     
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="right-part">
+                        <h4><b>Mechanic Shop Database</b>&nbsp<a href="https://github.com/melsantos/Mechanic-Shop-Database"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" class="git-link"/></a></h4>
+                        <ul class="d-flex" id="built-with">
+                            <span class="text-secondary"><b>Built with:</b></span>
+                            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" /></li>
+                            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" /></li>
+                        </ul>
+                        <p>A database management system that helps keep track of important business information for a fictious mechanic shop. It keeps track of current customers, vehicles, and employees. The system is built in Java and uses a PostGreSQL database. It uses a command line interface.</p>
                     </div>
                 </div>
             </div>
@@ -138,6 +155,28 @@
         </div>
     </section>    
 
+    <section id="models">
+        <div class="container-fluid p-0">
+            <model-viewer id="mv" src="media/glf/pigeon.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1" camera-orbit="113.7deg 89.21deg auto" auto-rotate>
+            </model-viewer>
+
+            <ul id="model-select">
+                <li>
+                    <input type="radio" id="pigeon" value="pigeon.glb" name="model" onchange="getValue(this)" checked/>
+                    <label for="pigeon">
+                        <img style="width: 70px;" src="media/glf/preview/pigeon.png" />
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" id="butter" value="butterfly.glb" name="model" onchange="getValue(this)"/>
+                    <label for="butter">
+                        <img style="width: 70px;" src="media/glf/preview/butterfly.png" />
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </section>
+
     <div id="footer">
         <div id="contact">
             <h6>Contact Me:</h6>
@@ -155,5 +194,5 @@
         console.log('callback - particles.js config loaded');
     });
 </script>
-
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </body>

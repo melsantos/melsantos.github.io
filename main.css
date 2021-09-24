@@ -172,11 +172,6 @@ h3 {
     width: 2rem;
 }
 
-#skills {
-    background: var(--main-bg-dark);
-    color:white;
-}
-
 #built-with {
     list-style: none;
     flex-wrap: wrap;
@@ -194,6 +189,11 @@ h3 {
     width: 25px;
     height: 25px;
     margin: 0;
+}
+
+#skills {
+    background: var(--main-bg-dark);
+    color:white;
 }
 
 .skill-list {
@@ -230,6 +230,47 @@ h3 {
 
 .skill-list > li:hover > div {
     transform: translateY(-5px);
+}
+
+#models {
+    background: var(--main-bg-dark);
+}
+
+#model-select {
+    display: flex; 
+    list-style: none; 
+    flex-wrap: wrap; 
+    color: white;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+#model-select > li {
+    border: 3px solid transparent;
+    margin: 0;
+    padding: 3px;
+}
+
+#model-select > li > label {
+    margin: 0;
+}
+
+#model-select > li:hover {
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    border-radius: 25%;
+}
+
+model-viewer {
+    margin: auto;
+    padding: 3px;
+    width: 60vw;
+    height: 400px;
+    --poster-color: transparent;
+}
+
+input[type=radio] {
+    display: none;
 }
 
 #footer {
@@ -281,5 +322,14 @@ h3 {
     .right-part {
         margin: 0 auto;
         min-width: 80vw;
+    }
+
+    #models {
+        padding: 0;
+        margin: 0;
+    }
+    #mv {
+        width: 80vw;
+        margin: 0 auto;
     }
 }

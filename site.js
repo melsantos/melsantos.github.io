@@ -43,6 +43,11 @@ function changeText() {
     typeOut();
 }
 
+function getValue(radio) {
+    var mv = document.getElementById("mv")
+    mv.src=`media/glf/${radio.value}`
+}
+
 startInterval();
 setTimeout(typeOut, 1500);
 
