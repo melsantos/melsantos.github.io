@@ -264,7 +264,7 @@ h3 {
 model-viewer {
     margin: auto;
     padding: 3px;
-    width: 60vw;
+    width: 50vw;
     height: 400px;
     --poster-color: transparent;
 }

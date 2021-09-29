@@ -10,19 +10,6 @@ var blurb_text = blurbs[0];
 var j = 0;
 var speed = 80;
 
-const body = document.body;
-
-if(body == null) {
-    console.log("cannot find body");
-}
-
-if(blurb != null) {
-    console.log("Blurb exists");
-} else {
-    console.log("Blurb doesn't exist");
-    throw new Error();
-}
-
 function startInterval() {
     setInterval(changeText, 6000);
 }
@@ -50,4 +37,3 @@ function getValue(radio) {
 
 startInterval();
 setTimeout(typeOut, 1500);
-
