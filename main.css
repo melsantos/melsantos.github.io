@@ -101,8 +101,12 @@ h3 {
     padding:  0 0rem 1rem 1rem;
 }
 
-.contact > link {
+.contact-link {
     color: white;
+}
+
+.contact-link:hover {
+    text-shadow: 2px 2px 0px var(--main-bg-dark);
 }
 
 .contact-icon {
@@ -149,6 +153,10 @@ h3 {
     animation-duration: 1s;
     animation-delay: 2.5s;
     animation-fill-mode: forwards;
+}
+
+#scroll-down > a {
+    text-decoration: none;
 }
 
 #scroll-down > a > i {
