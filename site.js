@@ -3,8 +3,8 @@ var blurb = document.getElementById('typer');
 var blurbs = [    
     "Hello World!",
     "UC Riverside Alumni",
-    "Error: Object not found",
-    "Just kidding!",
+    "Check out my github! /melsantos",
+    "Designed and coded by me😎",
 ]
 var blurb_text = blurbs[0];
 var j = 0;

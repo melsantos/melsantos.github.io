@@ -1,5 +1,5 @@
 * {
-    font-family: 'Montserrat', sans-serif; 
+    font-family: consolas; 
     line-height: 2.0;
 }
 
@@ -9,12 +9,16 @@
     --main-bg-light: #2D82B7;
     --secondary-bg: #F3DFBF;
     --main-accent: #1CB089;
-    --secondary-accent: #E1515A;
+    --secondary-accent-dark: #E1515A;
+    --secondary-accent-light: #ED969C;
   }
 
-a:hover {
-    text-decoration: none;
+a {
     color: var(--main-accent);
+}
+
+a:hover {
+    color: var(--secondary-accent-dark);
 }
 
 h3 {
@@ -29,12 +33,80 @@ h3 {
     padding-bottom: 3rem;
 }
 
-.material-icons {
+.material-icons, .devicon-github-original {
     display: inline-flex; 
     vertical-align: text-bottom;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     color: white;
     margin-right: 0.5rem;
+}
+
+#contact-button {
+    background-color: var(--main-bg-dark);
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    padding: 0.5em;
+    border: none;
+    justify-content: center;
+    text-align: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    display: flex;
+    z-index: 1000;
+    opacity: 0;
+    animation-name: fadein;
+    animation-duration: 0.5s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+}
+
+#contact-button > .material-icons {
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+}
+
+#contact-button:hover {
+    background-color: var(--secondary-accent-dark);
+}
+
+#contact {
+    width: 20rem;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
+.contact-title {
+    font-family: 'Montserrat', sans-serif;
+    text-align: right;
+    margin: 0;
+    padding-right: 2.8rem;
+    color: var(--main-accent);
+    font-weight: 800;
+}
+
+#contact-text {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    text-align: right;
+}
+
+.contact-list {
+    list-style: none;
+    margin: 0;
+    padding:  0 0rem 1rem 1rem;
+}
+
+.contact > link {
+    color: white;
+}
+
+.contact-icon {
+    margin-left: 0.5rem;
 }
 
 #navbar-list {    
@@ -63,6 +135,7 @@ h3 {
 
 #navbar-list > li > a {
     color: white;
+    text-decoration: none;
 }
 
 #navbar-list > li:hover {
@@ -86,6 +159,10 @@ h3 {
     border-radius: 50%;
     text-shadow: 0px 1rem #EFE9F4,
                  0px -1rem #EFE9F4;
+}
+
+#hero {
+    text-shadow: 2px 2px 2px var(--main-bg-dark);
 }
 
 .hero-text {
@@ -136,6 +213,10 @@ h3 {
     display: inline-block;
 }
 
+#education {
+    background-color: var(--secondary-bg);
+}
+
 .edu-logo {
     height: 100%;
     width: 100%;
@@ -170,6 +251,11 @@ h3 {
 
 .git-link {
     width: 2rem;
+    transition: transform 250ms cubic-bezier(.2,.8,.4,1);
+}
+
+.git-link:hover {
+    transform: scale(1.10);
 }
 
 #built-with {
@@ -194,25 +280,41 @@ h3 {
 #skills {
     background: var(--main-bg-dark);
     color:white;
+    padding: 0 25% 0 25%;
+}
+
+.skill-title {
+    text-align: right;
 }
 
 .skill-list {
     list-style: none;
     flex-wrap: wrap;
-    max-width: 600px;
-    justify-content: center;
-    margin: 0 auto;
-    text-align: center;
+    display: flex;
     padding: 0;
 }
 
 .skill-list > li {
-    margin: 0 1rem 1rem 1rem;    
-}
-
-.skill-list > li > img {
     width: 80px;
     height: 80px;
+    background: var(--main-accent);
+    box-shadow: 5px 5px var(--secondary-accent-dark);
+    border-radius: 5px;
+    margin: 0 0.8rem 0.8rem 0.8rem;
+    padding: 1rem;
+    transition: all 100ms;
+    display: flex;
+    align-items: center;
+}
+
+.skill-list > li:hover {
+    box-shadow: 10px 10px var(--secondary-accent-dark);
+    transition: box-shadow 100ms linear;
+}
+
+.skill-img {
+    width: 50px;
+    height: 50px;
     display: block;
     margin: 0 auto;
     -webkit-box-reflect: below 1px 
@@ -220,20 +322,19 @@ h3 {
 }
 
 .skill-list > li > div {
+    display: none;
+    color: var(--secondary-accent-dark);
+    position: absolute;
     transform: perspective(1px) translateZ(0);
     transition-duration: 0.3s;
     transition-property: transform;
     transition-timing-function: ease-out;
-    margin-top: 5px;
-    /* visibility: hidden; */
+    text-align: center;
+    font-size: 0.9rem;
 }
 
 .skill-list > li:hover > div {
     transform: translateY(-5px);
-}
-
-#models {
-    background: var(--main-bg-dark);
 }
 
 #model-select {
@@ -261,36 +362,8 @@ h3 {
     border-radius: 25%;
 }
 
-model-viewer {
-    margin: auto;
-    padding: 3px;
-    width: 50vw;
-    height: 400px;
-    --poster-color: transparent;
-}
-
 input[type=radio] {
     display: none;
-}
-
-#footer {
-    bottom: 0;
-    width: 100%;
-    height: 6em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    background: linear-gradient(var(--main-bg-dark), var(--main-bg-light));
-}
-
-#contact > a {
-    color: white;
-}
-
-#contact > a:hover {
-    color: var(--secondary-accent);
 }
 
 @keyframes blink {
@@ -303,8 +376,13 @@ input[type=radio] {
 }
 
 @media only screen and (max-width: 1000px) {
-    .material-icons {
+    #navbar-list > li > a > .material-icons {
         margin-right: 0;
+    }
+
+    .col-4, .col-8 {
+        flex: 100%;
+        max-width: 100%;
     }
 
     .nav-text {
@@ -319,17 +397,17 @@ input[type=radio] {
         margin: 0 auto;
         min-width: 80vw;
     }
+
     .right-part {
         margin: 0 auto;
         min-width: 80vw;
     }
 
-    #models {
+    #skills {
         padding: 0;
-        margin: 0;
     }
-    #mv {
-        width: 80vw;
-        margin: 0 auto;
+
+    .skill-title {
+        text-align: left;
     }
 }

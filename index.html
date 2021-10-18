@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
     <title>Melissa Santos</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon.ico">
 
@@ -12,6 +13,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet"> 
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
 
     <link rel="stylesheet" href="main.css">
@@ -20,12 +25,30 @@
 
 <body>
     <div class="container-fluid p-0" id="hero">
+        <button id="contact-button" type="button" data-toggle="collapse"
+                data-target="#contact" aria-expandned="false" >
+            <span class="material-icons">contact_page</span>
+        </button>
+        <div class="collapse" id="contact">
+            <div id="contact-text">
+                <h4 class="contact-title">Contact Me!</h4>
+                <ul class="contact-list">
+                    <li><a class="contact-link" href= "mailto:melissa.e.santos@outlook.com">melissa.e.santos@outlook.com<span class="material-icons contact-icon">email</span>
+                        </a>
+                    </li>    
+                    <li><a class="contact-link" href="media/Melissa_Santos_Resume.pdf">Resume<span class="material-icons contact-icon">description</span>
+                    </a></li>
+                    <li><a class="contact-link" href="https://github.com/melsantos">GitHub<i class="devicon-github-original contact-icon"></i>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+
         <div class="row m-0" id="particles-js">
             <div class="mx-auto hero-text">
                 <div id="name">Melissa Santos</div>
                 <div id="blurb">
-                    <span id="typer"></span>
-                    <span style="position: relative; left: -8px; bottom:2px;" id="blink">&boxv;</span>
+                    <span style="position: relative; right: 3px;">></span><span id="typer"></span><span style="position: relative; left: -5px;;" id="blink">&boxv;</span>
                 </div>
                 <div class="hvr-float" id="scroll-down">
                     <a href="#education"><i class="material-icons" style="font-size: 3rem">keyboard_arrow_down</i></a>
@@ -36,15 +59,13 @@
                 <li><a href="#education"><span class="material-icons">school</span><span class="nav-text">Education</span></a></li>
                 <li><a href="#projects"><span class="material-icons">code</span><span class="nav-text">Projects</span></a></li>
                 <li><a href="#skills"><span class="material-icons">architecture</span><span class="nav-text">My Skills</span></a></li>
-                <li><a href="media/Melissa_Santos_Resume.pdf"><span class="material-icons">description</span><span class="nav-text">Resume</span>
-                </a></li>
             </ul>
         </div>
     </div>
 
     <section id="education">
         <div class="container-fluid">
-            <h3>Education</h3>
+            <h3>🎓Education</h3>
             <div class="row">
                 <div class="col left-part edu">
                     <img src="media/UCR_LOGO.svg" class="edu-logo">
@@ -61,7 +82,7 @@
      
     <section id="projects">
         <div class="container-fluid">
-            <h3>My Projects</h3>
+            <h3>💻My Projects</h3>
 
             <div class="row d-flex p-3 proj-item">
                 <div class="col">
@@ -135,57 +156,54 @@
     
     <section id="skills">
         <div class="container-fluid">
-            <h3>Skills</h3>
-            <ul class="skill-list d-flex">
-                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" /><div>Python</div></li>
-                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" /><div>C++</div></li>
-                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" /><div>C</div></li>
-                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" /><div>Java</div></li>
-                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" /><div>HTML5</div></li>
-                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" /><div>CSS3</div></li>
-                <!-- <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" /><div>PostgreSQL</div></li> -->
-                <li><img src="media/django.svg" /><div>Django</div></li>
-                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" /><div>Git</div></li>
-                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" /><div>Visual Studio</div></li>
-                <!-- <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" /><div>Bootstrap</div></li>
-                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" /><div>Javascript</div></li> -->
-                <!-- <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" /><div>Linux</div></li> -->
-                <!-- <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vim/vim-original.svg" /><div>Vim</div></li> -->
-            </ul>
+            <h3>📕Skills</h3>
+
+            <div class="row mx-auto">
+                <div class="col-4 skill-title"><h4>Programming Languages</h4></div>
+                <div class="col-8">
+                    <ul class="skill-list">
+                        <li><div>Python</div><img class="skill-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" /></li>
+                        <li><div>C++</div><img class="skill-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" /></li>
+                        <li><div>C</div><img class="skill-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" /></li>
+                        <li><div>Javascript</div><img class="skill-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" /></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row mx-auto">
+                <div class="col-4 skill-title"><h4>Markup Languages</h4></div>
+                <div class="col-8">
+                    <ul class="skill-list">
+                        <li><div>HTML5</div><img class="skill-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" /></li>
+                        <li><div>CSS3</div><img class="skill-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" /></li>
+                        <li><div>LaTex</div><img class="skill-img" style="height: 30px;" src="media/LaTeX.svg" /></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row mx-auto">
+                <div class="col-4 skill-title"><h4>Frameworks</h4></div>
+                <div class="col-8">
+                    <ul class="skill-list">
+                        <li><div>Django</div><img class="skill-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-original.svg" /></li>
+                        <li><div>Bootstrap</div><img class="skill-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" /></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row mx-auto">
+                <div class="col-4 skill-title"><h4>Tools</h4></div>
+                <div class="col-8">
+                    <ul class="skill-list">
+                        <li><div>Git</div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" /></li>
+                        <li><div>Vim</div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vim/vim-original.svg" /></li>
+                        <li><div>Linux</div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" /></li>
+                        <li><div>Visual Studio</div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" /></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>    
-
-    <section id="models" hidden>
-        <div class="container-fluid p-0">
-            <model-viewer id="mv" src="media/glf/pigeon.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1" camera-orbit="113.7deg 89.21deg auto" auto-rotate>
-            </model-viewer>
-
-            <ul id="model-select">
-                <li>
-                    <input type="radio" id="pigeon" value="pigeon.glb" name="model" onchange="getValue(this)" checked/>
-                    <label for="pigeon">
-                        <img style="width: 70px;" src="media/glf/preview/pigeon.png" />
-                    </label>
-                </li>
-                <li>
-                    <input type="radio" id="butter" value="butterfly.glb" name="model" onchange="getValue(this)"/>
-                    <label for="butter">
-                        <img style="width: 70px;" src="media/glf/preview/butterfly.png" />
-                    </label>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <div id="footer">
-        <div id="contact">
-            <h6>Contact Me:</h6>
-            <a href= "mailto:melissa.e.santos@outlook.com">
-            <i class="material-icons" style="font-size: 1em;">email</i>
-            melissa.e.santos@outlook.com
-            </a>
-        </div>
-    </div>
 
 <script src="site.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
@@ -194,5 +212,4 @@
         console.log('callback - particles.js config loaded');
     });
 </script>
-<!-- <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script> -->
 </body>
