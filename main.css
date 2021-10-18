@@ -317,8 +317,8 @@ h3 {
     height: 50px;
     display: block;
     margin: 0 auto;
-    -webkit-box-reflect: below 1px 
-            -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(50%, transparent), to(rgba(255, 255, 255, 0.4)))
+    /* -webkit-box-reflect: below 1px 
+            -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(50%, transparent), to(rgba(255, 255, 255, 0.4))) */
 }
 
 .skill-list > li > div {
